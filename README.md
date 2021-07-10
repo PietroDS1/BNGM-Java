@@ -1,6 +1,6 @@
 # Banco Nacional Generation Midas
 
-### Tecnologias usadas no do projeto
+### Tecnologias usadas no projeto
 
 Linguagem Java
 Programação Orientada ao Objeto - POO
