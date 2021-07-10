@@ -1,5 +1,5 @@
 package Entities;
-
+//APAGUE-ME
 public class Contas {
 		//ATRIBUTO
 		private String nomeBanco = "BNGM";
