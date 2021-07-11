@@ -58,9 +58,10 @@ public class Contas {
 				
 			}			
 		}
-		public void verSaldo() {
-			System.out.printf("Seu saldo atual é: R$ %.2f , %d", saldo, movimentos);
+		public void verSaldo(){
+			System.out.printf("Seu saldo atual é: R$ %.2f ", saldo , "\n");
 		}
+		
 		public void chamaNomes() {
 			System.out.printf("-------------------------------\n Bem vindo ao banco: %s - G2\n", nomeBanco);
 			System.out.printf(" %s \n-------------------------------\n", slogan );
@@ -72,27 +73,5 @@ public class Contas {
 			for(int x = 0; x<menuPrincipal.length; x++) {
 				System.out.print(x + " - " + menuPrincipal[x] + "\n");
 			}
-			
-			
-		
-		
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
 }
