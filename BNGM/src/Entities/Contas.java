@@ -32,13 +32,14 @@ public class Contas {
 			return saldo;
 		}
 		//METODOS
-		public void credito(double valorCredito) {		
+		public double credito(double valorCredito) {		
 			if(valorCredito <=0) {
 				System.out.println("Número inválido, digite um número positivo!");			}
 			else{
 				saldo+= valorCredito; //saldo = saldo + valorCredito;
 				movimentos++;
 			}
+			return saldo;
 		}	
 		public void debito(double valorDebito) {
 			

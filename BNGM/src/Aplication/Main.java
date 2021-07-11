@@ -70,6 +70,7 @@ public class Main{
 								clienteEstudantil.menuEstudantil();
 								System.out.printf("\nDigite uma opção do menu\n");
 								escolha = leia.nextInt();
+								//--------------------------DEBITO-----------------------
 								if(escolha == 0) {
 									System.out.printf("-----------------------------\n");
 									System.out.printf("   Tipo e operação:  Débito \n");
@@ -79,18 +80,21 @@ public class Main{
 									System.out.printf("Digite o valor de débito: \n");
 									clienteEstudantil.checaLimite(leia.nextInt());
 								}
+								//------------------------------CREDITO---------------------------------
 								else if(escolha == 1) {
 									System.out.printf("-----------------------------\n");
 									System.out.printf("   Tipo e operação:  Crédito \n");
 									System.out.printf("-----------------------------\n");
-									System.out.printf("\nSeu saldo de conta é: R$ "+clienteEstudantil.getSaldo() +"\n");
+									clienteEstudantil.checaSaldo();
 									System.out.printf("Digite o valor de crédito: \n");
-									clienteEstudantil.credito(leia.nextDouble());       
+									clienteEstudantil.checaCredito(leia.nextDouble());       
 								}
+								//----------------------------------SALDO+LIMITE----------------------------------
 								else if(escolha == 2) {
 									clienteEstudantil.checaSaldo();
 									clienteEstudantil.checaLimiteValor();
 								}
+								//-------------------------------------SAIR-------------------------------
 								else if(escolha == 3){
 									break;
 								}

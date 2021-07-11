@@ -29,7 +29,7 @@ public class ContaEstudantil extends Contas{
 			}
 		}
 		
-		public void checaLimite(int valorDebito) {
+		public void checaLimite(double valorDebito) {
 					int opcao1;
 					System.out.printf("Digite: \n1 - Confirmar \n2 - Sair");
 					opcao1 = leia.nextInt();
@@ -77,6 +77,11 @@ public class ContaEstudantil extends Contas{
 			System.out.printf("\nLimite estudantil atual é de: %.2f ", limite, "\n");
 		}
 		public void checaSaldo() {
+			System.out.printf("\nSeu saldo atual é de: %.2f ",saldo, "\n");
+		}
+		public void checaCredito(double valorCreditado) {
+			credito(valorCreditado);
+			saldo += valorCreditado;
 			System.out.printf("\nSeu saldo atual é de: %.2f ",saldo, "\n");
 		}
 		
