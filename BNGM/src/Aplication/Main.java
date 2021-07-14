@@ -20,7 +20,7 @@ public class Main {
 		ContaEspecial clienteEspecial = new ContaEspecial(numero,0,1000.00);
 		ContaEmpresa clienteEmpresa = new ContaEmpresa(numero, 0);
 		ContaEstudantil clienteEstudantil = new ContaEstudantil(numero, 0, 5000);
-		System.out.println("##::::'##:'####:'########:::::'###:::::'######::"); 
+	System.out.println("##::::'##:'####:'########:::::'###:::::'######::"); 
         System.out.println("###::'###:. ##:: ##.... ##:::'## ##:::'##... ##:");
         System.out.println("####'####:: ##:: ##:::: ##::'##:. ##:: ##:::..::"); 
         System.out.println("## ### ##:: ##:: ##:::: ##:'##:::. ##:. ######::"); 
@@ -35,19 +35,24 @@ public class Main {
 			
 			System.out.println("-------------------------------\n Bem vindo ao banco: BNGM - G2\n");
 			System.out.println(" Onde o seu dinheiro vale ouro! \n-------------------------------\n" );
+<<<<<<< HEAD
 			System.out.println("\n--------Menu Inicial---------\n" );
 			String menuPrincipal[] = {"Conta PoupanÁa", "Conta Corrente", "Conta Especial", "Conta Empresa", "Conta Estudantil ", "Sair"};
+=======
+			
+			String menuPrincipal[] = {"Conta Poupan√ßa", "Conta Corrente", "Conta Especial", "Conta Empresa", "Conta Estudantil ", "Sair"};
+>>>>>>> 108127e2b8ca2b9750050e63853af30829adfcac
 				
 				for(int x = 0; x<menuPrincipal.length; x++) {
 					System.out.print(x + " - " + menuPrincipal[x] + "\n");
 			}
 			System.out.printf("\n");
-			System.out.printf("Digite uma opÁ„o de 0 a 5: ");
+			System.out.printf("Digite uma op√ß√£o de 0 a 5: ");
 			opcao = leia.nextInt();
 
 			if (opcao == 0) {
 				System.out.printf("-----------------------------\n");
-				System.out.printf("   Tipo de conta: PoupanÁa\n");
+				System.out.printf("   Tipo de conta: Poupan√ßa\n");
 				System.out.printf("-----------------------------\n");
 				System.out.println("Numero da conta: "+ clientePoupanca.getNumConta()+"-0\n");
 				
@@ -55,29 +60,29 @@ public class Main {
 					System.out.println("\n--------Menu---------\n" );
 					int escolha;
 					clientePoupanca.menuPoupanca();
-					System.out.printf("\nDigite uma opÁ„o do menu\n");
+					System.out.printf("\nDigite uma op√ß√£o do menu\n");
 					escolha = leia.nextInt();
 					//--------------------------DEBITO-----------------------
 					if(escolha == 0) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo e operaÁ„o:  DÈbito \n");
+						System.out.printf("   Tipo e opera√ß√£o:  D√©bito \n");
 						System.out.printf("-----------------------------\n");
 						clientePoupanca.verSaldo();
-						System.out.printf("\nDigite o valor de dÈbito: \n");
+						System.out.printf("\nDigite o valor de d√©bito: \n");
 						clientePoupanca.debito(leia.nextDouble());
-						System.out.println("\nVerificaÁaı de data anivers·rio conta poupanÁa\n");	
-						System.out.print("Digite que dia È hoje?");
+						System.out.println("\nVerifica√ßa√µ de data anivers√°rio conta poupan√ßa\n");	
+						System.out.print("Digite que dia √© hoje?");
 						clientePoupanca.verData(leia.nextInt());	
 					}
 					else if(escolha == 1) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo e operaÁ„o:  CrÈdito \n");
+						System.out.printf("   Tipo e opera√ß√£o:  Cr√©dito \n");
 						System.out.printf("-----------------------------\n");
 						clientePoupanca.verSaldo();
-						System.out.printf("\nDigite o valor de crÈdito: \n");
+						System.out.printf("\nDigite o valor de cr√©dito: \n");
 						clientePoupanca.credito(leia.nextDouble());
-						System.out.println("\nVerificaÁaı de data anivers·rio conta poupanÁa\n");	
-						System.out.print("Digite que dia È hoje?");
+						System.out.println("\nVerifica√ßa√µ de data anivers√°rio conta poupan√ßa\n");	
+						System.out.print("Digite que dia √© hoje?");
 						clientePoupanca.verData(leia.nextInt());	
 					}
 					else if(escolha == 2) {
@@ -87,7 +92,7 @@ public class Main {
 					else if(escolha == 3){
 						break;
 					}else {
-						System.out.println("N˙mero inv·lido, digite uma opÁ„o do menu 0 ‡ 3!");
+						System.out.println("N√∫mero inv√°lido, digite uma op√ß√£o do menu 0 √† 3!");
 					}
 					
 				}
@@ -103,32 +108,32 @@ public class Main {
 				    int escolha;
 				    
 					clienteCorrente1.menuCorrente();
-					System.out.printf("\nDigite uma opÁ„o do menu\n");
+					System.out.printf("\nDigite uma op√ß√£o do menu\n");
 					escolha = leia.nextInt();
 					//Debito
 					if(escolha == 0) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  DÈbito \n");
+						System.out.printf("   Tipo de opera√ß√£o:  D√©bito \n");
 						System.out.printf("-----------------------------\n");
 						clienteCorrente1.verSaldo();
-						System.out.printf("\nSeu limite de talıes È: "+ clienteCorrente1.getlimiteTalao()+ "\n\n");
-						System.out.printf("Digite o valor de dÈbito: \n");
+						System.out.printf("\nSeu limite de tal√µes √©: "+ clienteCorrente1.getlimiteTalao()+ "\n\n");
+						System.out.printf("Digite o valor de d√©bito: \n");
 						clienteCorrente1.debito(leia.nextInt());
 					}
 				    
 					//credito
 					else if(escolha == 1) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  CrÈdito \n");
+						System.out.printf("   Tipo de opera√ß√£o:  Cr√©dito \n");
 						System.out.printf("-----------------------------\n");
 						clienteCorrente1.verSaldo();
-						System.out.printf("\nSeu limite de talıes È: "+ clienteCorrente1.getlimiteTalao()+ "\n\n");
-						System.out.printf("Digite o valor de crÈdito: \n");
+						System.out.printf("\nSeu limite de tal√µes √©: "+ clienteCorrente1.getlimiteTalao()+ "\n\n");
+						System.out.printf("Digite o valor de cr√©dito: \n");
 						clienteCorrente1.credito(leia.nextDouble());       
 					}
 					else if(escolha ==2) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  Saldo \n");
+						System.out.printf("   Tipo de opera√ß√£o:  Saldo \n");
 						System.out.printf("-----------------------------\n");
 						clienteCorrente1.verSaldo();
 						clienteCorrente1.SaldoTalao();
@@ -136,10 +141,10 @@ public class Main {
 					
 					else if(escolha ==3) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o : Tal„o\n");
+						System.out.printf("   Tipo de opera√ß√£o : Tal√£o\n");
 						System.out.printf("-----------------------------\n");
 						clienteCorrente1.verSaldo();
-					    System.out.println("\nDigite 1 para pedir tal„o.\n");
+					    System.out.println("\nDigite 1 para pedir tal√£o.\n");
 						clienteCorrente1.talao(leia.nextInt());
 					
 				}else if(escolha == 4){
@@ -156,24 +161,24 @@ public class Main {
 					for(int x = 0; x <= 10; x++){
 						int escolha;
 						clienteEspecial.menuEspecial();
-						System.out.printf("\nDigite uma opÁ„o do menu\n");
+						System.out.printf("\nDigite uma op√ß√£o do menu\n");
 						escolha = leia.nextInt();
 						if(escolha == 0) {
 							System.out.printf("-----------------------------\n");
-							System.out.printf("   Tipo e operaÁ„o:  DÈbito \n");
+							System.out.printf("   Tipo e opera√ß√£o:  D√©bito \n");
 							System.out.printf("-----------------------------\n");
 							clienteEspecial.checaSaldo();//checasaldo
-							System.out.printf("\nSeu saldo para limite especial È: R$ "+ clienteEspecial.getLimite()+ "\n\n");
-							System.out.printf("Digite o valor de dÈbito: \n");
+							System.out.printf("\nSeu saldo para limite especial √©: R$ "+ clienteEspecial.getLimite()+ "\n\n");
+							System.out.printf("Digite o valor de d√©bito: \n");
 							clienteEspecial.debito(leia.nextInt());//checa limite
 							
 						}
 						else if(escolha == 1) {
 							System.out.printf("-----------------------------\n");
-							System.out.printf("   Tipo e operaÁ„o:  CrÈdito \n");
+							System.out.printf("   Tipo e opera√ß√£o:  Cr√©dito \n");
 							System.out.printf("-----------------------------\n");
-							System.out.printf("\nSeu saldo de conta È: R$ "+clienteEspecial.getSaldo() +"\n");
-							System.out.printf("Digite o valor de crÈdito: \n");
+							System.out.printf("\nSeu saldo de conta √©: R$ "+clienteEspecial.getSaldo() +"\n");
+							System.out.printf("Digite o valor de cr√©dito: \n");
 							clienteEspecial.credito(leia.nextDouble());       
 						}
 						else if(escolha == 2) {
@@ -184,7 +189,7 @@ public class Main {
 							break;
 						}
 						else {
-							System.out.println("N˙mero inv·lido!");
+							System.out.println("N√∫mero inv√°lido!");
 						}
 					}
 					
@@ -201,7 +206,7 @@ public class Main {
 					System.out.println("\n--------Menu---------\n" );
 					int escolha;
 					clienteEmpresa.menuEmpresa();
-					System.out.printf("\nDigite uma opÁ„o do menu\n");
+					System.out.printf("\nDigite uma op√ß√£o do menu\n");
 					escolha = leia.nextInt();
 					if(clienteEmpresa.getMovimentos() > 9 ) {
 						System.out.println("Limite de movimentos diarios!\nVoltando ao menu principal!");
@@ -209,39 +214,39 @@ public class Main {
 					}
 					if (escolha == 0) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  DÈbito \n");
+						System.out.printf("   Tipo de opera√ß√£o:  D√©bito \n");
 						System.out.printf("-----------------------------\n");
 						clienteEmpresa.verSaldo();
-						System.out.printf("\nSeu saldo para Emprestimo È: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
-						System.out.printf("Digite o valor de dÈbito: \n");
+						System.out.printf("\nSeu saldo para Emprestimo √©: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
+						System.out.printf("Digite o valor de d√©bito: \n");
 						clienteEmpresa.debito(leia.nextDouble());
 					} else if (escolha == 1) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  CrÈdito \n");
+						System.out.printf("   Tipo de opera√ß√£o:  Cr√©dito \n");
 						System.out.printf("-----------------------------\n");
 						clienteEmpresa.verSaldo();
-						System.out.printf("\nSeu saldo para Emprestimo È: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
-						System.out.printf("Digite o valor de crÈdito: \n");
+						System.out.printf("\nSeu saldo para Emprestimo √©: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
+						System.out.printf("Digite o valor de cr√©dito: \n");
 						clienteEmpresa.credito(leia.nextDouble());
 					} else if (escolha == 2) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  Emprestimo \n");
+						System.out.printf("   Tipo de opera√ß√£o:  Emprestimo \n");
 						System.out.printf("-----------------------------\n");
 						clienteEmpresa.verSaldo();
-						System.out.printf("\nSeu saldo para Emprestimo È de R$: " + clienteEmpresa.getEmprestimoL());
-						System.out.printf("\nSeu valor de Emprestimo j· solicitado È de R$: "+ clienteEmpresa.getEmprestimoS() + "\n\n");
+						System.out.printf("\nSeu saldo para Emprestimo √© de R$: " + clienteEmpresa.getEmprestimoL());
+						System.out.printf("\nSeu valor de Emprestimo j√° solicitado √© de R$: "+ clienteEmpresa.getEmprestimoS() + "\n\n");
 						System.out.println("Digite o valor de emprestimo: \n");
 						clienteEmpresa.emprestimo(leia.nextDouble());
 					} else if (escolha == 3) {
 						System.out.printf("-----------------------------\n");
-						System.out.printf("   Tipo de operaÁ„o:  Saldo \n");
+						System.out.printf("   Tipo de opera√ß√£o:  Saldo \n");
 						System.out.printf("-----------------------------\n");
 						clienteEmpresa.verSaldo();
-						System.out.printf("\nSeu saldo para Emprestimo È: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
+						System.out.printf("\nSeu saldo para Emprestimo √©: R$ " + clienteEmpresa.getEmprestimoL() + "\n\n");
 					} else if (escolha == 4) {
 						break;
 					} else {
-						System.out.println("Digite uma opÁ„o v·lida do menu!");
+						System.out.println("Digite uma op√ß√£o v√°lida do menu!");
 			    	}
 
 				}
@@ -256,25 +261,25 @@ public class Main {
 						
 							int escolha;
 							clienteEstudantil.menuEstudantil();
-							System.out.printf("\nDigite uma opÁ„o do menu\n");
+							System.out.printf("\nDigite uma op√ß√£o do menu\n");
 							escolha = leia.nextInt();
 							//--------------------------DEBITO-----------------------
 							if(escolha == 0) {
 								System.out.printf("-----------------------------\n");
-								System.out.printf("   Tipo e operaÁ„o:  DÈbito \n");
+								System.out.printf("   Tipo e opera√ß√£o:  D√©bito \n");
 								System.out.printf("-----------------------------\n");
 								clienteEstudantil.checaSaldo();
-								System.out.printf("\nSeu saldo para limite estudantil È: R$ "+ clienteEstudantil.getLimite() + "\n\n");
-								System.out.printf("Digite o valor de dÈbito: \n");
+								System.out.printf("\nSeu saldo para limite estudantil √©: R$ "+ clienteEstudantil.getLimite() + "\n\n");
+								System.out.printf("Digite o valor de d√©bito: \n");
 								clienteEstudantil.checaLimite(leia.nextInt());
 							}
 							//------------------------------CREDITO---------------------------------
 							else if(escolha == 1) {
 								System.out.printf("-----------------------------\n");
-								System.out.printf("   Tipo e operaÁ„o:  CrÈdito \n");
+								System.out.printf("   Tipo e opera√ß√£o:  Cr√©dito \n");
 								System.out.printf("-----------------------------\n");
 								clienteEstudantil.checaSaldo();
-								System.out.printf("Digite o valor de crÈdito: \n");
+								System.out.printf("Digite o valor de cr√©dito: \n");
 								clienteEstudantil.checaCredito(leia.nextDouble());       
 							}
 							//----------------------------------SALDO+LIMITE----------------------------------
@@ -287,7 +292,7 @@ public class Main {
 								break;
 							}
 							else {
-								System.out.printf("N˙mero inv·lido \n");
+								System.out.printf("N√∫mero inv√°lido \n");
 							}
 					}
 					
@@ -302,7 +307,7 @@ public class Main {
 
 				break;
 			} else {
-				System.out.println("Digite uma opÁ„o v·lida do menu!");
+				System.out.println("Digite uma op√ß√£o v√°lida do menu!");
 			}
 		}
 
