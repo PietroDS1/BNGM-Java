@@ -36,7 +36,7 @@ public class ContaEstudantil extends Contas{
 					if(opcao1 == 1) {
 					if (valorDebito >0) {
 						
-					
+					//apagueme
 						if(saldo >= valorDebito) {
 							saldo-=valorDebito;
 						}
