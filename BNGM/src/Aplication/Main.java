@@ -31,9 +31,11 @@ public class Main {
 		int opcao;
 	
 		for (int y = 0; y < 99999; y++) {
+			
+			
 			System.out.println("-------------------------------\n Bem vindo ao banco: BNGM - G2\n");
 			System.out.println(" Onde o seu dinheiro vale ouro! \n-------------------------------\n" );
-			
+			System.out.println("\n--------Menu Inicial---------\n" );
 			String menuPrincipal[] = {"Conta Poupança", "Conta Corrente", "Conta Especial", "Conta Empresa", "Conta Estudantil ", "Sair"};
 				
 				for(int x = 0; x<menuPrincipal.length; x++) {
@@ -50,7 +52,7 @@ public class Main {
 				System.out.println("Numero da conta: "+ clientePoupanca.getNumConta()+"-0\n");
 				
 				for(int x = 0; x <= 10; x++){
-					
+					System.out.println("\n--------Menu---------\n" );
 					int escolha;
 					clientePoupanca.menuPoupanca();
 					System.out.printf("\nDigite uma opção do menu\n");
@@ -96,6 +98,7 @@ public class Main {
 				System.out.printf("   Tipo de conta: Corrente\n");
 				System.out.printf("-----------------------------\n");
 				System.out.println("Numero da conta: "+ clienteCorrente1.getNumConta()+"-1\n");
+				System.out.println("\n--------Menu---------\n" );
 				for(int x = 0; x <= 10; x++){
 				    int escolha;
 				    
@@ -146,9 +149,10 @@ public class Main {
 			}
 			 else if (opcao == 2) {
 				
-				 System.out.printf("-----------------------------\n");
+				 	System.out.printf("-----------------------------\n");
 					System.out.printf("   Tipo de conta: Especial\n");
 					System.out.printf("-----------------------------\n");
+					System.out.println("\n--------Menu---------\n" );
 					for(int x = 0; x <= 10; x++){
 						int escolha;
 						clienteEspecial.menuEspecial();
@@ -194,7 +198,7 @@ public class Main {
 					System.out.printf("   Tipo de conta: Empresa\n");
 					System.out.printf("-----------------------------\n");
 					System.out.println("Numero da conta: "+ clienteEmpresa.getNumConta()+"-3\n");
-
+					System.out.println("\n--------Menu---------\n" );
 					int escolha;
 					clienteEmpresa.menuEmpresa();
 					System.out.printf("\nDigite uma opção do menu\n");
@@ -248,6 +252,7 @@ public class Main {
 						System.out.printf("   Tipo de conta: Estudantil\n");
 						System.out.printf("-----------------------------\n");
 						System.out.println("Numero da conta: "+ clienteEstudantil.getNumConta()+"-4");
+						System.out.println("\n--------Menu---------\n" );
 						
 							int escolha;
 							clienteEstudantil.menuEstudantil();

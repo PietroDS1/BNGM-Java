@@ -41,10 +41,15 @@ public class ContaEstudantil extends Contas{
 							saldo-=valorDebito;
 						}
 						else if(valorDebito > saldo) {
+							if(valorDebito > limite) {
+								System.out.printf("Limite estourado!!!");
+							}
+							else {
 							super.debito(valorDebito);
 							limite -= valorDebito;
 							saldo += valorDebito;
 							movimentos++;
+							}
 						}
 						else if(valorDebito <= 5000.00){
 							
