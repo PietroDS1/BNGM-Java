@@ -8,7 +8,7 @@ public class ContaEstudantil extends Contas{
 		//ATRIBUTO
 		private double limite= 5000;
 		private double valorDebitoS = 0.0;
-		//private double saldo = 0.00;
+		
 		
 		//CONSTRUTOR
 		public ContaEstudantil(int numConta, double saldo, double limite){
@@ -34,11 +34,13 @@ public class ContaEstudantil extends Contas{
 					System.out.printf("Digite: \n1 - Confirmar \n2 - Sair");
 					opcao1 = leia.nextInt();
 					if(opcao1 == 1) {
+					if (valorDebito >0) {
+						
 					
 						if(saldo >= valorDebito) {
 							saldo-=valorDebito;
 						}
-						else if(valorDebito < saldo) {
+						else if(valorDebito > saldo) {
 							super.debito(valorDebito);
 							limite -= valorDebito;
 							saldo += valorDebito;
@@ -57,20 +59,24 @@ public class ContaEstudantil extends Contas{
 							movimentos++;
 							}
 						 }else if(valorDebito > saldo) {
-							 System.out.printf("Número Inválido");
+							 System.out.printf("Número Inválido!!!");
 						 }
+						 
 						else {
 							saldo -= valorDebito;
 							movimentos++;
 						}
 						
+				}else {
+					 System.out.printf("Número Inválido, digite um número positivo!!!");
 				}
+					}
 					else if(opcao1 == 2){
 						menuEstudantil();
 					}
 					
 					else {
-						System.out.printf("Número inválido");
+						System.out.printf("Número inválido!!!");
 					}	
 			}	
 		public void checaLimiteValor() {
