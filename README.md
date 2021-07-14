@@ -11,13 +11,13 @@ Para executar o projeto, basta clonar e abrir o projeto dentro do programa Eclip
 
 ### Funcionalidades
 
-- [] POO
-- [] Menu
-- [] Conta Poupança  -----   Janaina
-- [] Conta Corrente  -----   Valmir
-- [] Conta Empresarial ----   Felipe
-- [] Conta Estudantil ----   Pietro
-- [] Conta Especial   ----   Enzo
+- [x] POO
+- [x] Menu
+- [x] Conta Poupança  -----   Janaina
+- [x] Conta Corrente  -----   Valmir
+- [x] Conta Empresarial ----   Felipe
+- [x] Conta Estudantil ----   Pietro
+- [x] Conta Especial   ----   Enzo
 
 ### Importante!
 
