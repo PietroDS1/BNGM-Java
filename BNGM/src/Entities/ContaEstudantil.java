@@ -8,7 +8,7 @@ public class ContaEstudantil extends Contas{
 		//ATRIBUTO
 		private double limite= 5000;
 		private double valorDebitoS = 0.0;
-		private double saldo = 0.00;
+		//private double saldo = 0.00;
 		
 		//CONSTRUTOR
 		public ContaEstudantil(int numConta, double saldo, double limite){
@@ -34,7 +34,11 @@ public class ContaEstudantil extends Contas{
 					System.out.printf("Digite: \n1 - Confirmar \n2 - Sair");
 					opcao1 = leia.nextInt();
 					if(opcao1 == 1) {
-						if(valorDebito < saldo) {
+					
+						if(saldo >= valorDebito) {
+							saldo-=valorDebito;
+						}
+						else if(valorDebito < saldo) {
 							super.debito(valorDebito);
 							limite -= valorDebito;
 							saldo += valorDebito;
@@ -52,6 +56,8 @@ public class ContaEstudantil extends Contas{
 							valorDebitoS += valorDebito;
 							movimentos++;
 							}
+						 }else if(valorDebito > saldo) {
+							 System.out.printf("Número Inválido");
 						 }
 						else {
 							saldo -= valorDebito;
@@ -62,17 +68,11 @@ public class ContaEstudantil extends Contas{
 					else if(opcao1 == 2){
 						menuEstudantil();
 					}
+					
 					else {
 						System.out.printf("Número inválido");
 					}	
 			}	
-		//}
-		/*
-		public void pulaLinha() {
-			for(int r = 0; r<10; r++) {
-				System.out.printf("\n");
-			}*/
-		
 		public void checaLimiteValor() {
 			System.out.printf("\nLimite estudantil atual é de: %.2f ", limite, "\n");
 		}
@@ -81,10 +81,8 @@ public class ContaEstudantil extends Contas{
 		}
 		public void checaCredito(double valorCreditado) {
 			credito(valorCreditado);
-			saldo += valorCreditado;
 			System.out.printf("\nSeu saldo atual é de: %.2f ",saldo, "\n");
 		}
-		
 }
 		
 		

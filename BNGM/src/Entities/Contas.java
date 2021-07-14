@@ -1,12 +1,12 @@
 package Entities;
 //APAGUE-ME
-public class Contas {
+abstract class Contas {
 		//ATRIBUTO
-		private String nomeBanco = "BNGM";
+		protected String nomeBanco = "BNGM";
 		private int numConta;
-		private String slogan = "Onde o seu dinheiro vale ouro!";
-		private double saldo;
-		public int movimentos;
+		protected String slogan = "Onde o seu dinheiro vale ouro!";
+		protected double saldo = 0;
+		protected int movimentos;
 		//CONSTRUCTOR
 		public Contas(int numConta, double saldo) {
 			super();
@@ -31,15 +31,18 @@ public class Contas {
 		public double getSaldo() {
 			return saldo;
 		}
+		
+		public int getMovimentos() {
+			return movimentos;
+		}
 		//METODOS
-		public double credito(double valorCredito) {		
+		public void credito(double valorCredito) {		
 			if(valorCredito <=0) {
 				System.out.println("Número inválido, digite um número positivo!");			}
 			else{
 				saldo+= valorCredito; //saldo = saldo + valorCredito;
 				movimentos++;
 			}
-			return saldo;
 		}	
 		public void debito(double valorDebito) {
 			
@@ -63,16 +66,21 @@ public class Contas {
 			System.out.printf("Seu saldo atual é: R$ %.2f ", saldo , "\n");
 		}
 		
-		public void chamaNomes() {
+		/*public void chamaNomes() {
 			System.out.printf("-------------------------------\n Bem vindo ao banco: %s - G2\n", nomeBanco);
 			System.out.printf(" %s \n-------------------------------\n", slogan );
-		}
+		}*/
 		
-		public void menu() {
+		/*public void menu() {
 			String menuPrincipal[] = {"Conta Poupança", "Conta Corrente", "Conta Especial", "Conta Empresa", "Conta Estudantil ", "Sair"};
 			
 			for(int x = 0; x<menuPrincipal.length; x++) {
 				System.out.print(x + " - " + menuPrincipal[x] + "\n");
 			}
+		}*/
+		
+		public void limpaDados() {
+			saldo = 0;
+			movimentos = 0;
 		}
 }
