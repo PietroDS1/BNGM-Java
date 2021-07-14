@@ -1,7 +1,7 @@
 package Entities;
 
 import java.util.Scanner;
-
+//ApagueME
 public class ContaEstudantil extends Contas{
 		
 		Scanner leia = new Scanner(System.in);
